@@ -35,7 +35,7 @@ module.exports = function(options) {
     context: __dirname,
     entry: [
       './lib/core-js-no-number',
-      'regenerator/runtime'
+      'regenerator-runtime/runtime'
     ],
     output: {
       path: path.join(__dirname, 'assets'),
@@ -265,7 +265,7 @@ module.exports = function(options) {
 
   if (entry) {
     config = merge(config, {
-      entry: entry 
+      entry: entry
     });
   }
 

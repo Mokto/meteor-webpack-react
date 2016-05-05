@@ -6,7 +6,7 @@ var path = require('path');
 dirs.lib = path.join(dirs.webpack, 'lib');
 if (!fs.existsSync(dirs.lib)) mkdir(dirs.lib);
 
-var coreJsVersion = JSON.parse(fs.readFileSync('node_modules/core-js/package.json')).version;
+var coreJsVersion = JSON.parse(fs.readFileSync('node_modules/core-js-builder/node_modules/core-js/package.json')).version;
 var targetFileName = 'core-js-no-number.js';
 var currentFileExist = fs.existsSync(path.join(dirs.lib, targetFileName));
 var currentFileFewLines = currentFileExist ?
