@@ -1,6 +1,12 @@
 {
-  "extends": "eslint-config-airbnb",
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "meteor": true,
+    "browser": true,
+    "jasmine": true
+  },
   "rules": {
-    "prefer-const": 0
+    "no-console": 0  
   }
 }
