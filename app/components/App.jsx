@@ -1,11 +1,11 @@
 /* global ReactMeteorData */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import reactMixin from 'react-mixin';
 import BlazeTemplate from './BlazeTemplate';
-import {Users, Posts} from 'collections';
+import { Users, Posts } from 'collections';
 import './App.css';
 
-Meteor.call('sayHello', function(err, res) {
+Meteor.call('sayHello', (err, res) => {
   console.log(res);
 });
 
@@ -13,7 +13,7 @@ Meteor.call('sayHello', function(err, res) {
 export default class App extends Component {
   getMeteorData() {
     return {
-      users: Users.find().fetch()
+      users: Users.find().fetch(),
     };
   }
 

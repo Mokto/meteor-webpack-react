@@ -9,5 +9,5 @@ Accounts.ui.config({
 console.log('Running on client only');
 
 Meteor.startup(() => {
-  ReactDOM.render(<App/>, document.getElementById('root'));
+  ReactDOM.render(<App />, document.getElementById('root'));
 });
