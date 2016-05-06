@@ -250,7 +250,8 @@ module.exports = function(options) {
         jsdom: 'window'
       },
       plugins: [
-        new webpack.IgnorePlugin(/react\/lib\/(ReactContext|ExecutionEnvironment)/)
+        new webpack.IgnorePlugin(/react\/lib\/(ReactContext|ExecutionEnvironment)/),
+        new webpack.IgnorePlugin(/react\/addons/)
       ],
       devServer: {
         port: webpackPort,
