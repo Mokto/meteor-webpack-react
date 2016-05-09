@@ -13,18 +13,19 @@ Meteor.call('sayHello', (err, res) => {
 export default class App extends Component {
   getMeteorData() {
     return {
-      users: Users.find().fetch(),
+      usersCount: Users.find().fetch().length,
+      postsCount: Posts.find().fetch().length
     };
   }
 
   render() {
-    let userCount = Users.find().fetch().length;
-    let postsCount = Posts.find().fetch().length;
+    const { usersCount, postsCount } = this.data;
+
     return (
       <div className="App">
         {Meteor.isClient && <BlazeTemplate template={Template.loginButtons} />}
         <h1>Hello Webpack!</h1>
-        <p>There are {userCount} users in the Minimongo  (login to change)</p>
+        <p>There are {usersCount} users in the Minimongo  (login to change)</p>
         <p>There are {postsCount} posts in the Minimongo  (autopublish removed)</p>
       </div>
     );
